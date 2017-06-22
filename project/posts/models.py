@@ -18,13 +18,13 @@ class Record(models.Model):
 	class Meta:
 		ordering=['-published']
 
-		def __str__(self):
+	def __str__(self):
 
-			return self.title
+		return self.title
 
-		def __unicode__(self):
+	def __unicode__(self):
 
-			return str(self.title)
+		return str(self.title)
 
-			def get_absolute_url(self):
-				return reverse("record_detail", kwargs={'pk':self.pk})
+	def get_absolute_url(self):
+		return reverse("records_detail", kwargs={'pk':self.pk})
